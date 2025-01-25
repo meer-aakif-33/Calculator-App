@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: black;
+    color: white;
+}
+button {
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    font-size: 23px;
+    background-color: #333333;
+    color: white;
+
+}
+.operator-button {
+    background-color: rgb(254, 160, 10);
+}
+#display {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+}

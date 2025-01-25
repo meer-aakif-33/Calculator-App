@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="display" readonly value="">
+
+    <div>
+        <!-- Row 1 -->
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendOperator('+')" class="operator-button">+</button>
+    </div>
+    <div>
+        <!-- Row 2 -->
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendOperator('-')" class="operator-button">-</button>
+    </div>
+    <div>
+        <!-- Row 3 -->
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendOperator('*')" class="operator-button">*</button>
+    </div>
+    <div>
+        <!-- Row 4 -->
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendOperator('/')" class="operator-button">/</button>
+    </div>
+    <div>
+        <!-- Clear Button -->
+        <button onclick="clearCalculation()">Clear</button>
+    </div>
+
+    <p class="js-calculation-result">Please enter some values</p>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
