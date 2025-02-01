@@ -9,43 +9,40 @@
     </style>
 </head>
 <body>
-    <h1>Calculator</h1>
-    <input type="text" id="display" readonly value="">
-
-    <div>
-        <!-- Row 1 -->
-        <button onclick="appendValue('1')">1</button>
-        <button onclick="appendValue('2')">2</button>
-        <button onclick="appendValue('3')">3</button>
-        <button onclick="appendOperator('+')" class="operator-button">+</button>
-    </div>
-    <div>
-        <!-- Row 2 -->
-        <button onclick="appendValue('4')">4</button>
-        <button onclick="appendValue('5')">5</button>
-        <button onclick="appendValue('6')">6</button>
-        <button onclick="appendOperator('-')" class="operator-button">-</button>
-    </div>
-    <div>
-        <!-- Row 3 -->
+    <h1>Advanced Calculator</h1>
+    <input type="text" id="display" readonly>
+    <div class="calculator-grid">
+        <button onclick="clearCalculation()" class="clear">C</button>
+        <button onclick="deleteLast()" class="delete">DEL</button>
+        <button onclick="memorySave()" class="memory">MS</button>
+        <button onclick="memoryRecall()" class="memory">MR</button>
+        <button onclick="squareRoot()" class="operator">√</button>
+        <button onclick="square()" class="operator">x²</button>
+        <button onclick="power()" class="operator">xʸ</button>
+        <button onclick="appendOperator('/')" class="operator">÷</button>
         <button onclick="appendValue('7')">7</button>
         <button onclick="appendValue('8')">8</button>
         <button onclick="appendValue('9')">9</button>
-        <button onclick="appendOperator('*')" class="operator-button">*</button>
-    </div>
-    <div>
-        <!-- Row 4 -->
-        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendOperator('*')" class="operator">×</button>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendOperator('-')" class="operator">−</button>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendOperator('+')" class="operator">+</button>
+        <button onclick="appendValue('0')" class="zero">0</button>
         <button onclick="appendValue('.')">.</button>
-        <button onclick="calculateResult()">=</button>
-        <button onclick="appendOperator('/')" class="operator-button">/</button>
+        <button onclick="calculateResult()" class="equals">=</button>
+        <button onclick="factorial()" class="operator">n!</button>
     </div>
-    <div>
-        <!-- Clear Button -->
-        <button onclick="clearCalculation()">Clear</button>
+    <p class="js-calculation-result">Enter values to calculate</p>
+    <div class="history">
+        <h3>Calculation History</h3>
+        <ul id="history-list"></ul>
+        <button onclick="clearHistory()" class="clear-history">Clear History</button>
     </div>
-
-    <p class="js-calculation-result">Please enter some values</p>
 
     <script src="script.js">
     </script>

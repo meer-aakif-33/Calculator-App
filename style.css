@@ -1,30 +1,88 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 20px;
-    background-color: black;
+    background-color: #1e1e1e;
     color: white;
+    overflow-x: hidden;
+}
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 350px;
+    margin: auto;
 }
 button {
     margin: 5px;
-    font-size: 16px;
+    font-size: 23px;
     cursor: pointer;
     border: none;
-    width: 70px;
-    height:70px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    font-size: 23px;
-    background-color: #333333;
+    background-color: #333;
     color: white;
-
 }
-.operator-button {
-    background-color: rgb(254, 160, 10);
+button.operator {
+    background-color: orange;
+}
+button.equals {
+    background-color: green;
+}
+button.clear {
+    background-color: rgb(207, 32, 32);
+}
+button.delete {
+    background-color: rgb(197, 95, 95);
+}
+button.memory {
+    background-color: rgb(183, 101, 183);
 }
 #display {
-    width: 300px;
-    margin-bottom: 20px;
+width: 100%;
+max-width: 350px; /* Ensures input doesn't exceed calculator width */
+padding: 15px;
+font-size: 25px;
+text-align: right;
+margin-bottom: 10px;
+background-color: #222;
+color: white;
+border: none;
+border-radius: 5px;
+}
+
+
+.history {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 350px;
+    margin: auto;
+    background: #2a2a2a;
     padding: 10px;
-    font-size: 20px;
-    text-align: right;
+    border-radius: 5px;
+
+}
+.history h3 {
+    text-align: center;
+}
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+.history li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+.clear-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 40px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: rgb(120, 154, 95);
+    border-radius: 10px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
 }
